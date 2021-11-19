@@ -1,0 +1,26 @@
+{
+	"Network": {
+		"Address": ":19132"
+	},
+	"Server": {
+		"Name": "§9SG Network",
+		"ShutdownMessage": "§9Server closed.",
+		"AuthEnabled": true,
+		"JoinMessage": "",
+		"QuitMessage": ""
+	},
+	"World": {
+		"Name": "§9Lobby",
+		"Folder": "./data/world",
+		"SimulationDistance": 8
+	},
+	"Players": {
+		"MaxCount": 500,
+		"MaximumChunkRadius": 4,
+		"SaveData": false,
+		"Folder": ""
+	},
+	"Resources": {
+		"Folder": "./data/resources"
+	}
+}
