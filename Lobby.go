@@ -15,9 +15,9 @@ func main() {
 			var newTag string
 			q, err := query.Do("nitrofaction.fr:19132")
 			if err != nil {
-				newTag = "§9Practice\n§cOFFLINE"
+				newTag = "§9Practice\n\uE300\n§cOFFLINE"
 			} else {
-				newTag = fmt.Sprintf("§9Practice\n§a%v/%v", q["numplayers"], q["maxplayers"])
+				newTag = fmt.Sprintf("§9Practice\n\uE300\n§a%v/%v", q["numplayers"], q["maxplayers"])
 			}
 			SlapperPractice.SetNameTag(newTag)
 			time.Sleep(1 * time.Second)

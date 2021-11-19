@@ -1,0 +1,30 @@
+{
+  "header": {
+    "uuid": "c864a3f2-9d93-11eb-a8b3-0242ac166454",
+    "name": "SGPractice",
+    "description": "§fSGPractice official Texture Pack",
+    "version": [
+      0,
+      0,
+      2
+    ],
+    "min_engine_version": [
+      1,
+      2,
+      6
+    ]
+  },
+  "modules": [
+    {
+      "description": "§fSGPractice official Texture Pack",
+      "version": [
+        0,
+        0,
+        2
+      ],
+      "uuid": "d3c8d65a-9d93-11eb-a8b3-0242ac166454",
+      "type": "resources"
+    }
+  ],
+  "format_version": 1
+}
