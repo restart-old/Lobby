@@ -9,10 +9,8 @@ import (
 
 func (p *PlayerHandler) HandleAttackEntity(ctx *event.Context, e world.Entity, force, height *float64) {
 	ctx.Cancel()
-	if v, ok := e.(*player.Player); ok {
-		if v.XUID() == "" {
-			v.Hurt(1, damage.SourceEntityAttack{Attacker: p.P})
-		}
+	if v, ok := e.(*player.Player); ok && v.XUID() == "" {
+		v.Hurt(1, damage.SourceEntityAttack{Attacker: p.P})
 	}
 
 }
