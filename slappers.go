@@ -13,20 +13,19 @@ import (
 var SkinGanni, _ = slapper.DecodePNGSkin("./data/slapper/ganni.png", slapper.CustomSlimGeometry)
 var SkinRestart, _ = slapper.DecodePNGSkin("./data/slapper/restart.png", slapper.CustomGeometry)
 
-var SlapperPractice = slapper.New("Slapper(Practice)", "§7Loading...", SkinGanni, mgl64.Vec3{-8, 144, -99}).WithAction(func(p *player.Player) {
+var NAPractice = slapper.New("Slapper(NA)", "§7Loading...", SkinRestart, mgl64.Vec3{-8.5, 144, -98.5}).WithAction(func(p *player.Player) {
 	p.Transfer("nitrofaction.fr:19132")
-}).WithSpawnFunc(practiceSpawnFunc)
+}).WithSpawnFunc(naPractice).WithYawAndPitch(60, 0)
 
-func practiceSpawnFunc(s *slapper.Slapper) {
+func naPractice(s *slapper.Slapper) {
 	go func() {
 		for {
 			var newTag string
-			q, err := query.Do("nitrofaction.fr:19132")
+			q, err := query.Do("na.sgpractice.tk:19132")
 			if err != nil {
-				fmt.Println(err)
-				newTag = "§9Practice\n\uE300\n§cOFFLINE"
+				newTag = "§9NA Practice\n§cOFFLINE"
 			} else {
-				newTag = fmt.Sprintf("§9Practice\n\uE300\n§a%v/%v", q["numplayers"], q["maxplayers"])
+				newTag = fmt.Sprintf("§9Practice\n§a%v/%v", q["numplayers"], q["maxplayers"])
 			}
 			s.SetNameTag(newTag)
 			time.Sleep(3 * time.Second)

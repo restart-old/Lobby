@@ -5,6 +5,7 @@ import (
 
 	"github.com/df-mc/dragonfly/server"
 	"github.com/df-mc/dragonfly/server/block/cube"
+	"github.com/go-gl/mathgl/mgl64"
 )
 
 func main() {
@@ -23,12 +24,13 @@ func main() {
 	defaultWorld.SetTime(0)
 	defaultWorld.SetSpawn(cube.Pos{-26, 149, -71})
 
-	SlapperPractice.AddToWorld(defaultWorld)
+	NAPractice.AddToWorld(defaultWorld)
 
 	for {
 		if p, err := server.Accept(); err != nil {
 			return
 		} else {
+			p.Move(mgl64.Vec3{0, 0, 0}, -90, 0)
 			p.Handle(&handler.PlayerHandler{P: p})
 		}
 	}
