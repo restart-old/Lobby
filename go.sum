@@ -44,6 +44,16 @@ github.com/RestartFU/slapper v0.0.0-20211119023823-b90a46c39de8 h1:Qc+WeyILceeqK
 github.com/RestartFU/slapper v0.0.0-20211119023823-b90a46c39de8/go.mod h1:3MoiVHfJIE97avXmUQuVwS8hefTuIPTD0oSNaKuIiPU=
 github.com/RestartFU/slapper v0.0.0-20211119030646-1ece93a1a97b h1:v9GcoEZdVAegmV/BM0VS5gZsFOL1VdYhaK6Ko5N1cW0=
 github.com/RestartFU/slapper v0.0.0-20211119030646-1ece93a1a97b/go.mod h1:3MoiVHfJIE97avXmUQuVwS8hefTuIPTD0oSNaKuIiPU=
+github.com/RestartFU/slapper v0.0.0-20211121175811-0d5a3e8432d0 h1:VcVvvig5a4wLyurQ40DyqarRy2hCZX2Nz/YZc+QFNT0=
+github.com/RestartFU/slapper v0.0.0-20211121175811-0d5a3e8432d0/go.mod h1:3MoiVHfJIE97avXmUQuVwS8hefTuIPTD0oSNaKuIiPU=
+github.com/RestartFU/slapper v0.0.0-20211121212023-492b6736ac04 h1:R20CQ9RY2sBtQ2yWyEML3Hz1p8TfBbL5fgf5d19HzIM=
+github.com/RestartFU/slapper v0.0.0-20211121212023-492b6736ac04/go.mod h1:3MoiVHfJIE97avXmUQuVwS8hefTuIPTD0oSNaKuIiPU=
+github.com/RestartFU/slapper v0.0.0-20211121212636-ee38cb21f521 h1:/F+KXddb2ptMsaW27w74fRlYd/P8zwpfiK6syePjFMM=
+github.com/RestartFU/slapper v0.0.0-20211121212636-ee38cb21f521/go.mod h1:3MoiVHfJIE97avXmUQuVwS8hefTuIPTD0oSNaKuIiPU=
+github.com/RestartFU/slapper v0.0.0-20211121212857-8b0425984dab h1:6lu/owT2f1bbkVdvdXzBeSGzbTcBgWakwUe1aTauD28=
+github.com/RestartFU/slapper v0.0.0-20211121212857-8b0425984dab/go.mod h1:3MoiVHfJIE97avXmUQuVwS8hefTuIPTD0oSNaKuIiPU=
+github.com/RestartFU/slapper v0.0.0-20211121213625-eadf461cfabc h1:uLeBO2utqDHH+//pa5o1vQyjCOWwifZEZE3O/Bu1Pwg=
+github.com/RestartFU/slapper v0.0.0-20211121213625-eadf461cfabc/go.mod h1:3MoiVHfJIE97avXmUQuVwS8hefTuIPTD0oSNaKuIiPU=
 github.com/brentp/intintmap v0.0.0-20190211203843-30dc0ade9af9 h1:/G0ghZwrhou0Wq21qc1vXXMm/t/aKWkALWwITptKbE0=
 github.com/brentp/intintmap v0.0.0-20190211203843-30dc0ade9af9/go.mod h1:TOk10ahXejq9wkEaym3KPRNeuR/h5Jx+s8QRWIa2oTM=
 github.com/census-instrumentation/opencensus-proto v0.2.1/go.mod h1:f6KPmirojxKA12rnyqOA5BBL4O983OfeGPqjHWSTneU=

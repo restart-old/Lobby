@@ -3,7 +3,7 @@ module lobby
 go 1.17
 
 require (
-	github.com/RestartFU/slapper v0.0.0-20211119030646-1ece93a1a97b // indirect
+	github.com/RestartFU/slapper v0.0.0-20211121212857-8b0425984dab // indirect
 	github.com/brentp/intintmap v0.0.0-20190211203843-30dc0ade9af9 // indirect
 	github.com/cespare/xxhash v1.1.0 // indirect
 	github.com/df-mc/dragonfly v0.4.1-0.20211114201131-364a06b088e9 // indirect

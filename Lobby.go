@@ -1,29 +1,13 @@
 package main
 
 import (
-	"fmt"
 	"lobby/handler"
-	"time"
 
 	"github.com/df-mc/dragonfly/server"
-	"github.com/sandertv/gophertunnel/query"
+	"github.com/df-mc/dragonfly/server/block/cube"
 )
 
 func main() {
-	go func() {
-		for {
-			var newTag string
-			q, err := query.Do("nitrofaction.fr:19132")
-			if err != nil {
-				newTag = "§9Practice\n\uE300\n§cOFFLINE"
-			} else {
-				newTag = fmt.Sprintf("§9Practice\n\uE300\n§a%v/%v", q["numplayers"], q["maxplayers"])
-			}
-			SlapperPractice.SetNameTag(newTag)
-			time.Sleep(1 * time.Second)
-		}
-	}()
-
 	config := readConfig()
 	log := logger()
 
@@ -34,8 +18,10 @@ func main() {
 	defaultWorld := server.World()
 
 	defaultWorld.StopTime()
+	defaultWorld.StopRaining()
 	defaultWorld.StopWeatherCycle()
 	defaultWorld.SetTime(0)
+	defaultWorld.SetSpawn(cube.Pos{-26, 149, -71})
 
 	SlapperPractice.AddToWorld(defaultWorld)
 
