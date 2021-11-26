@@ -3,20 +3,20 @@
 		"Address": ":19132"
 	},
 	"Server": {
-		"Name": "§9SG Network",
-		"ShutdownMessage": "§9Server closed.",
+		"Name": "§9SG (Back Soon)",
+		"ShutdownMessage": "Server closed.",
 		"AuthEnabled": true,
 		"JoinMessage": "",
 		"QuitMessage": ""
 	},
 	"World": {
-		"Name": "§9Lobby",
+		"Name": "Lobby",
 		"Folder": "./data/world",
 		"SimulationDistance": 8
 	},
 	"Players": {
-		"MaxCount": 500,
-		"MaximumChunkRadius": 4,
+		"MaxCount": 0,
+		"MaximumChunkRadius": 32,
 		"SaveData": false,
 		"Folder": ""
 	},

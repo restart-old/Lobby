@@ -2,13 +2,15 @@ package main
 
 import (
 	"lobby/handler"
+	"time"
 
+	"github.com/RestartFU/whitelist"
 	"github.com/df-mc/dragonfly/server"
 	"github.com/df-mc/dragonfly/server/block/cube"
-	"github.com/go-gl/mathgl/mgl64"
 )
 
 func main() {
+	wl, _ := whitelist.New("./whitelist.json")
 	config := readConfig()
 	log := logger()
 
@@ -30,7 +32,12 @@ func main() {
 		if p, err := server.Accept(); err != nil {
 			return
 		} else {
-			p.Move(mgl64.Vec3{0, 0, 0}, -90, 0)
+			if !wl.Whitelisted(p.Name()) {
+				go func() {
+					time.Sleep(p.Latency() * 10)
+					p.Disconnect("§cServer will be back soon\n§cdiscord.gg/tcY6bJv9nb")
+				}()
+			}
 			p.Handle(&handler.PlayerHandler{P: p})
 		}
 	}
