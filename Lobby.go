@@ -36,7 +36,7 @@ func main() {
 		} else {
 			fmt.Println(p.Name(), "is now connected with the ip:", p.Addr().String())
 			if wl.Enabled {
-				disconnectIfNotWhiteListed(wl, p, server)
+				go disconnectIfNotWhiteListed(wl, p, server)
 			}
 			p.Handle(&handler.PlayerHandler{P: p})
 		}
@@ -46,13 +46,10 @@ func main() {
 func disconnectIfNotWhiteListed(wl *whitelist.WhiteList, p *player.Player, server *server.Server) {
 	if !wl.Whitelisted(p.Name()) {
 		p.SetGameMode(world.GameModeSurvival)
-		go func() {
-			for _, ok := server.Player(p.UUID()); ok; {
-				if p.OnGround() {
-					p.Disconnect("§9Server will be back soon\n§fhttp://sgpractice.tk/discord")
-				}
-				continue
+		for _, ok := server.Player(p.UUID()); ok; {
+			if p.OnGround() {
+				p.Disconnect("§9Server will be back soon\n§fhttp://sgpractice.tk/discord")
 			}
-		}()
+		}
 	}
 }
