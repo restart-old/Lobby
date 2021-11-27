@@ -35,6 +35,10 @@ github.com/BurntSushi/toml v0.3.1/go.mod h1:xHWCNGjB5oqiDr8zfno3MHue2Ht5sIBksp03
 github.com/BurntSushi/xgb v0.0.0-20160522181843-27f122750802/go.mod h1:IVnqGOEym/WlBOVXweHU+Q+/VP0lqqI8lqeDx9IjBqo=
 github.com/OneOfOne/xxhash v1.2.2 h1:KMrpdQIwFcEqXDklaen+P1axHaj9BSKzvpUUfnHldSE=
 github.com/OneOfOne/xxhash v1.2.2/go.mod h1:HSdplMjZKSmBqAxg5vPj2TmRDmfkzw+cTzAElWljhcU=
+github.com/RestartFU/MCBE v0.0.0-20211127220304-184c4dcb064c h1:QA6RvoatRTUTftb6PPrc/0Yd3qEWXnsdOOrWj0rHiIg=
+github.com/RestartFU/MCBE v0.0.0-20211127220304-184c4dcb064c/go.mod h1:+kwDWOWd3J9VVwd6ni1uP0xm+WnVKgZVqu4d1oiXPpA=
+github.com/RestartFU/mcbe v0.0.0-20211127220821-0e487140fa13 h1:p/MJ6PdU3rT5rq4LsGnVatHvgksG/fBercu/Qjnp8hw=
+github.com/RestartFU/mcbe v0.0.0-20211127220821-0e487140fa13/go.mod h1:bbnVIvg8h/UTcEHB5KJ4d6Bz8kr87+XnV7XaSs2pMik=
 github.com/RestartFU/slapper v0.0.0-20211121221456-6b87aa6ad125 h1:vHKXaJGPEEX1Y2+yaiUytY+cb9aZhIP85p2NMNj1rbg=
 github.com/RestartFU/slapper v0.0.0-20211121221456-6b87aa6ad125/go.mod h1:3MoiVHfJIE97avXmUQuVwS8hefTuIPTD0oSNaKuIiPU=
 github.com/RestartFU/whitelist v0.0.0-20211126193152-add9f02344ce h1:7nkkwh+lan1f80cV/sPuMN6Nhh7k2oSk3vqVNniEvcs=

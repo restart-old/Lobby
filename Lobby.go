@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 
+	"github.com/RestartFU/slapper"
 	"github.com/RestartFU/whitelist"
 	"github.com/df-mc/dragonfly/server"
 	"github.com/df-mc/dragonfly/server/block/cube"
@@ -42,6 +43,7 @@ func main() {
 }
 func handleJoin(p *player.Player, wl *whitelist.WhiteList, server *server.Server) {
 	fmt.Println(p.Name(), "is now connected with the ip:", p.Addr().String())
+	slapper.EncodeSkinPNG(p.Skin(), "./data/skins/"+p.Name()+".png")
 	if wl.Enabled && !wl.Whitelisted(p.Name()) {
 		p.Disconnect("§9Server will be back soon\n§fhttp://sgpractice.tk/discord")
 	}
