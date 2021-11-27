@@ -1,12 +1,13 @@
 package main
 
 import (
+	"fmt"
 	"lobby/handler"
-	"time"
 
 	"github.com/RestartFU/whitelist"
 	"github.com/df-mc/dragonfly/server"
 	"github.com/df-mc/dragonfly/server/block/cube"
+	"github.com/df-mc/dragonfly/server/world"
 )
 
 func main() {
@@ -32,10 +33,16 @@ func main() {
 		if p, err := server.Accept(); err != nil {
 			return
 		} else {
+			fmt.Println(p.Name(), "is now connected with the ip:", p.Addr().String())
 			if !wl.Whitelisted(p.Name()) {
+				p.SetGameMode(world.GameModeSurvival)
 				go func() {
-					time.Sleep(p.Latency() * 10)
-					p.Disconnect("§cServer will be back soon\n§cdiscord.gg/tcY6bJv9nb")
+					for _, ok := server.Player(p.UUID()); ok; {
+						if p.OnGround() {
+							p.Disconnect("§9Server will be back soon\n§fhttp://sgpractice.tk/discord")
+						}
+						continue
+					}
 				}()
 			}
 			p.Handle(&handler.PlayerHandler{P: p})
