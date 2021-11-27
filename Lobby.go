@@ -10,12 +10,16 @@ import (
 	"github.com/df-mc/dragonfly/server/player"
 )
 
-func main() {
-	wl, _ := whitelist.New("./whitelist.json")
-	config := readConfig()
-	log := logger()
+var wl *whitelist.WhiteList
+var config server.Config
 
-	server := server.New(&config, log)
+func init() {
+	wl, _ = whitelist.New("./whitelist.json")
+	config = readConfig()
+}
+
+func main() {
+	server := server.New(&config, logger())
 	server.Start()
 	server.CloseOnProgramEnd()
 
