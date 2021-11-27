@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"time"
 
 	"github.com/RestartFU/whitelist"
 	"github.com/df-mc/dragonfly/server"
@@ -43,15 +42,7 @@ func main() {
 }
 func handleJoin(p *player.Player, wl *whitelist.WhiteList, server *server.Server) {
 	fmt.Println(p.Name(), "is now connected with the ip:", p.Addr().String())
-	if wl.Enabled {
-		disconnectIfNotWhiteListed(wl, p, server)
-	}
-}
-
-func disconnectIfNotWhiteListed(wl *whitelist.WhiteList, p *player.Player, server *server.Server) {
-	if !wl.Whitelisted(p.Name()) {
-		time.Sleep(500 * time.Millisecond)
+	if wl.Enabled && !wl.Whitelisted(p.Name()) {
 		p.Disconnect("§9Server will be back soon\n§fhttp://sgpractice.tk/discord")
-
 	}
 }

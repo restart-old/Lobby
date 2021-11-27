@@ -59,6 +59,8 @@ github.com/df-mc/dragonfly v0.4.1-0.20211118120329-36bc934733ab h1:yxuF4Y0bwc2yH
 github.com/df-mc/dragonfly v0.4.1-0.20211118120329-36bc934733ab/go.mod h1:91zaFe+tkZAuaS2OdRAf9huVITMjPeEQt8NCPXw6QXg=
 github.com/df-mc/dragonfly v0.4.1-0.20211127104341-f0e0308bcc8b h1:ZjFd2ykx/AS4vnHF/JYIcebrZhFPAcN3QFG+e25sRGc=
 github.com/df-mc/dragonfly v0.4.1-0.20211127104341-f0e0308bcc8b/go.mod h1:91zaFe+tkZAuaS2OdRAf9huVITMjPeEQt8NCPXw6QXg=
+github.com/df-mc/dragonfly v0.4.1-0.20211127170302-e98ea7fec7de h1:7GbroqZ6S/calebbY3poBZNApgAEJO0RcPWdFgAIC1g=
+github.com/df-mc/dragonfly v0.4.1-0.20211127170302-e98ea7fec7de/go.mod h1:T21p8dodPsBX1JLMLcv9zFJJOAcJ7q7O+a5958HBKK0=
 github.com/df-mc/goleveldb v1.1.9 h1:ihdosZyy5jkQKrxucTQmN90jq/2lUwQnJZjIYIC/9YU=
 github.com/df-mc/goleveldb v1.1.9/go.mod h1:+NHCup03Sci5q84APIA21z3iPZCuk6m6ABtg4nANCSk=
 github.com/envoyproxy/go-control-plane v0.9.0/go.mod h1:YTl/9mNaCwkRvm6d1a2C3ymFceY/DCBVvsKhRF0iEA4=
@@ -159,8 +161,12 @@ github.com/rogpeppe/go-internal v1.3.0/go.mod h1:M8bDsm7K2OlrFYOpmOWEs/qY81heoFR
 github.com/sandertv/go-raknet v1.9.1/go.mod h1:s1lD7LTts74R9csTeI4WlGcp6PmXAGX+DeJlQF3KMlg=
 github.com/sandertv/go-raknet v1.10.0 h1:KERyx6Ooc+4VmmYaa1ncByO1g18k3+Ste/wyUdCjtTw=
 github.com/sandertv/go-raknet v1.10.0/go.mod h1:s1lD7LTts74R9csTeI4WlGcp6PmXAGX+DeJlQF3KMlg=
+github.com/sandertv/go-raknet v1.10.2 h1:aVwwSOhZQND6fo6aBJbJ4TSWIpfJWoxZMY//StAk7h4=
+github.com/sandertv/go-raknet v1.10.2/go.mod h1:s1lD7LTts74R9csTeI4WlGcp6PmXAGX+DeJlQF3KMlg=
 github.com/sandertv/gophertunnel v1.16.1 h1:MpHNV2RCgNI8ZJTZ/239YpKd83/kkNt/YTFNkfFb2II=
 github.com/sandertv/gophertunnel v1.16.1/go.mod h1:TpC717w6p5WIDDLhQzaXeumOjCsGpsjyzxTCvA4hceg=
+github.com/sandertv/gophertunnel v1.16.4 h1:QEVNLcWhlXmjf+zDXxU+PMIwdeH2pCR4glwvUL+vknA=
+github.com/sandertv/gophertunnel v1.16.4/go.mod h1:cu9ZDQVTXY1RJO/te3syrPvCeCAzKt9eB4jkSzXljTw=
 github.com/sirupsen/logrus v1.8.1 h1:dJKuHgqk1NNQlqoA6BTlM1Wf9DOH3NBjQyu0h9+AZZE=
 github.com/sirupsen/logrus v1.8.1/go.mod h1:yWOB1SBYBC5VeMP7gHvWumXLIWorT60ONWic61uBYv0=
 github.com/spaolacci/murmur3 v0.0.0-20180118202830-f09979ecbc72 h1:qLC7fQah7D6K1B0ujays3HV9gkFtllcxhzImRR7ArPQ=
