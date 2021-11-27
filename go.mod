@@ -4,7 +4,7 @@ go 1.17
 
 require (
 	github.com/RestartFU/slapper v0.0.0-20211121221456-6b87aa6ad125
-	github.com/RestartFU/whitelist v0.0.0-20211126193152-add9f02344ce
+	github.com/RestartFU/whitelist v0.0.0-20211127040035-e0458c5d0b28
 	github.com/df-mc/dragonfly v0.4.1-0.20211118120329-36bc934733ab
 	github.com/go-gl/mathgl v1.0.0
 	github.com/sirupsen/logrus v1.8.1

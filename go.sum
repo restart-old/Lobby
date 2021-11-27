@@ -39,6 +39,8 @@ github.com/RestartFU/slapper v0.0.0-20211121221456-6b87aa6ad125 h1:vHKXaJGPEEX1Y
 github.com/RestartFU/slapper v0.0.0-20211121221456-6b87aa6ad125/go.mod h1:3MoiVHfJIE97avXmUQuVwS8hefTuIPTD0oSNaKuIiPU=
 github.com/RestartFU/whitelist v0.0.0-20211126193152-add9f02344ce h1:7nkkwh+lan1f80cV/sPuMN6Nhh7k2oSk3vqVNniEvcs=
 github.com/RestartFU/whitelist v0.0.0-20211126193152-add9f02344ce/go.mod h1:2b2BXc8jygN03Ckg7A1rxOj4lb9aoECFnqoDNtla8zg=
+github.com/RestartFU/whitelist v0.0.0-20211127040035-e0458c5d0b28 h1:N7JanEILNnHKF7R9GIvfFvcqI+kZerhWye5LOHrkNlI=
+github.com/RestartFU/whitelist v0.0.0-20211127040035-e0458c5d0b28/go.mod h1:2b2BXc8jygN03Ckg7A1rxOj4lb9aoECFnqoDNtla8zg=
 github.com/brentp/intintmap v0.0.0-20190211203843-30dc0ade9af9 h1:/G0ghZwrhou0Wq21qc1vXXMm/t/aKWkALWwITptKbE0=
 github.com/brentp/intintmap v0.0.0-20190211203843-30dc0ade9af9/go.mod h1:TOk10ahXejq9wkEaym3KPRNeuR/h5Jx+s8QRWIa2oTM=
 github.com/census-instrumentation/opencensus-proto v0.2.1/go.mod h1:f6KPmirojxKA12rnyqOA5BBL4O983OfeGPqjHWSTneU=
