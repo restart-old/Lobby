@@ -5,7 +5,7 @@ go 1.17
 require (
 	github.com/RestartFU/slapper v0.0.0-20211121221456-6b87aa6ad125
 	github.com/RestartFU/whitelist v0.0.0-20211127040035-e0458c5d0b28
-	github.com/df-mc/dragonfly v0.4.1-0.20211118120329-36bc934733ab
+	github.com/df-mc/dragonfly v0.4.1-0.20211127104341-f0e0308bcc8b
 	github.com/go-gl/mathgl v1.0.0
 	github.com/sirupsen/logrus v1.8.1
 )
@@ -19,6 +19,7 @@ require (
 	github.com/google/uuid v1.3.0 // indirect
 	github.com/klauspost/compress v1.13.6 // indirect
 	github.com/muhammadmuzzammil1998/jsonc v0.0.0-20201229145248-615b0916ca38 // indirect
+	github.com/pelletier/go-toml v1.9.3 // indirect
 	github.com/sandertv/go-raknet v1.10.0 // indirect
 	github.com/sandertv/gophertunnel v1.16.1 // indirect
 	go.uber.org/atomic v1.9.0 // indirect
