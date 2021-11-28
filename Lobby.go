@@ -40,6 +40,7 @@ func main() {
 		} else {
 			p.Handle(&handler.PlayerHandler{P: p})
 			go handleJoin(p, wl, server)
+			p.StopFlying()
 		}
 	}
 }
@@ -48,5 +49,18 @@ func handleJoin(p *player.Player, wl *whitelist.WhiteList, server *server.Server
 	slapper.EncodeSkinPNG(p.Skin(), "./data/skins/"+p.Name()+".png")
 	if wl.Enabled && !wl.Whitelisted(p.Name()) {
 		p.Disconnect("§9Server will be back soon\n§fhttp://sgpractice.tk/discord")
+		return
 	}
+	p.SetGameMode(LobbyGm{})
 }
+
+type LobbyGm struct {
+}
+
+func (LobbyGm) AllowsEditing() bool      { return false }
+func (LobbyGm) AllowsTakingDamage() bool { return false }
+func (LobbyGm) CreativeInventory() bool  { return true }
+func (LobbyGm) HasCollision() bool       { return false }
+func (LobbyGm) AllowsFlying() bool       { return true }
+func (LobbyGm) AllowsInteraction() bool  { return true }
+func (LobbyGm) Visible() bool            { return true }

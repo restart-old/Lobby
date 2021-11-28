@@ -4,9 +4,9 @@ go 1.17
 
 require (
 	github.com/RestartFU/mcbe v0.0.0-20211128004125-92545999fad8
-	github.com/RestartFU/slapper v0.0.0-20211121221456-6b87aa6ad125
+	github.com/RestartFU/slapper v0.0.0-20211128172316-0063e08d0256
 	github.com/RestartFU/whitelist v0.0.0-20211127040035-e0458c5d0b28
-	github.com/df-mc/dragonfly v0.4.1-0.20211127170302-e98ea7fec7de
+	github.com/df-mc/dragonfly v0.4.1-0.20211128155728-073e26a29251
 	github.com/go-gl/mathgl v1.0.0
 	github.com/sirupsen/logrus v1.8.1
 )

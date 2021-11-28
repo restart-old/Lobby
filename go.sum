@@ -39,6 +39,12 @@ github.com/RestartFU/mcbe v0.0.0-20211128004125-92545999fad8 h1:AcqOdcZ0R7pAVoDI
 github.com/RestartFU/mcbe v0.0.0-20211128004125-92545999fad8/go.mod h1:bbnVIvg8h/UTcEHB5KJ4d6Bz8kr87+XnV7XaSs2pMik=
 github.com/RestartFU/slapper v0.0.0-20211121221456-6b87aa6ad125 h1:vHKXaJGPEEX1Y2+yaiUytY+cb9aZhIP85p2NMNj1rbg=
 github.com/RestartFU/slapper v0.0.0-20211121221456-6b87aa6ad125/go.mod h1:3MoiVHfJIE97avXmUQuVwS8hefTuIPTD0oSNaKuIiPU=
+github.com/RestartFU/slapper v0.0.0-20211128161930-110cd35f2db2 h1:H6GDzBiaVCI1v+E7h0NYEmAIcvxeRRAn+IGhJsN/DsY=
+github.com/RestartFU/slapper v0.0.0-20211128161930-110cd35f2db2/go.mod h1:QH01VTejIz3Bzc6BiPYIxRiH7JfLQ/u7qfJmpSt9RIU=
+github.com/RestartFU/slapper v0.0.0-20211128164742-ef4be3348098 h1:gQW9QYkX0Naog4YGv0Tk5tkihtFL9mgsaV4mKtzPTPM=
+github.com/RestartFU/slapper v0.0.0-20211128164742-ef4be3348098/go.mod h1:QH01VTejIz3Bzc6BiPYIxRiH7JfLQ/u7qfJmpSt9RIU=
+github.com/RestartFU/slapper v0.0.0-20211128172316-0063e08d0256 h1:LGef8nO8OcdUmw81w4NMCIGsxQVJ7/cM+L+WVh6+p/Q=
+github.com/RestartFU/slapper v0.0.0-20211128172316-0063e08d0256/go.mod h1:QH01VTejIz3Bzc6BiPYIxRiH7JfLQ/u7qfJmpSt9RIU=
 github.com/RestartFU/whitelist v0.0.0-20211127040035-e0458c5d0b28 h1:N7JanEILNnHKF7R9GIvfFvcqI+kZerhWye5LOHrkNlI=
 github.com/RestartFU/whitelist v0.0.0-20211127040035-e0458c5d0b28/go.mod h1:2b2BXc8jygN03Ckg7A1rxOj4lb9aoECFnqoDNtla8zg=
 github.com/brentp/intintmap v0.0.0-20190211203843-30dc0ade9af9 h1:/G0ghZwrhou0Wq21qc1vXXMm/t/aKWkALWwITptKbE0=
@@ -58,6 +64,8 @@ github.com/df-mc/dragonfly v0.4.1-0.20211114201131-364a06b088e9/go.mod h1:91zaFe
 github.com/df-mc/dragonfly v0.4.1-0.20211118120329-36bc934733ab/go.mod h1:91zaFe+tkZAuaS2OdRAf9huVITMjPeEQt8NCPXw6QXg=
 github.com/df-mc/dragonfly v0.4.1-0.20211127170302-e98ea7fec7de h1:7GbroqZ6S/calebbY3poBZNApgAEJO0RcPWdFgAIC1g=
 github.com/df-mc/dragonfly v0.4.1-0.20211127170302-e98ea7fec7de/go.mod h1:T21p8dodPsBX1JLMLcv9zFJJOAcJ7q7O+a5958HBKK0=
+github.com/df-mc/dragonfly v0.4.1-0.20211128155728-073e26a29251 h1:NQul+lzBizJbb6g7ZHaGfjFL2yDktWBMt2arX/Sk32E=
+github.com/df-mc/dragonfly v0.4.1-0.20211128155728-073e26a29251/go.mod h1:T21p8dodPsBX1JLMLcv9zFJJOAcJ7q7O+a5958HBKK0=
 github.com/df-mc/goleveldb v1.1.9 h1:ihdosZyy5jkQKrxucTQmN90jq/2lUwQnJZjIYIC/9YU=
 github.com/df-mc/goleveldb v1.1.9/go.mod h1:+NHCup03Sci5q84APIA21z3iPZCuk6m6ABtg4nANCSk=
 github.com/envoyproxy/go-control-plane v0.9.0/go.mod h1:YTl/9mNaCwkRvm6d1a2C3ymFceY/DCBVvsKhRF0iEA4=
