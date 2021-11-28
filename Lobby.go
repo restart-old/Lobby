@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"lobby/handler"
 
 	"github.com/RestartFU/slapper"
 	"github.com/RestartFU/whitelist"
@@ -37,6 +38,7 @@ func main() {
 		if p, err := server.Accept(); err != nil {
 			return
 		} else {
+			p.Handle(&handler.PlayerHandler{P: p})
 			go handleJoin(p, wl, server)
 		}
 	}

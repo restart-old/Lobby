@@ -41,4 +41,4 @@ func NewSlapperTransfer(pos mgl64.Vec3, skin skin.Skin, addr, name string) *slap
 var SkinGanni, _ = slapper.DecodePNGSkin("./data/slapper/ganni.png", slapper.CustomSlimGeometry)
 var SkinRestart, _ = slapper.DecodePNGSkin("./data/slapper/restart.png", slapper.CustomGeometry)
 
-var NAPractice = NewSlapperTransfer(mgl64.Vec3{-8.5, 144, -98.5}, SkinRestart, "na.sgpractice.tk:19132", "§9NA Practice").WithYawAndPitch(60, 0)
+var NAPractice = NewSlapperTransfer(mgl64.Vec3{-8.5, 144, -98.5}, SkinRestart, "glowhcf.net:19134", "§9HCF").WithYawAndPitch(60, 0)
