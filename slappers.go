@@ -13,7 +13,7 @@ import (
 
 func NewSlapperTransfer(pos mgl64.Vec3, skin skin.Skin, addr, name string) *slapper.Slapper {
 	f := func(s *slapper.Slapper) {
-		ticker := time.NewTicker(3 * time.Second)
+		ticker := time.NewTicker(5 * time.Second)
 		go func() {
 			for {
 				select {
