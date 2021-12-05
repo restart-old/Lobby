@@ -10,6 +10,7 @@ import (
 	"github.com/df-mc/dragonfly/server"
 	"github.com/df-mc/dragonfly/server/block/cube"
 	"github.com/df-mc/dragonfly/server/player"
+	"github.com/dragonfly-on-steroids/moreHandlers"
 )
 
 var wl *whitelist.WhiteList
@@ -39,7 +40,7 @@ func main() {
 		if p, err := server.Accept(); err != nil {
 			return
 		} else {
-			p.Handle(&handler.PlayerHandler{P: p})
+			p.Handle(moreHandlers.New(&handler.PlayerHandler{P: p}))
 			go handleJoin(p, wl, server)
 			p.StopFlying()
 		}

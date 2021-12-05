@@ -6,3 +6,7 @@ type PlayerHandler struct {
 	player.NopHandler
 	P *player.Player
 }
+
+func (*PlayerHandler) Name() string {
+	return "PlayerHandler"
+}
