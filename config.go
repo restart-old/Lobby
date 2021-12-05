@@ -13,7 +13,7 @@ func readConfig() server.Config {
 	content, err := os.ReadFile("./config.json")
 	if err != nil {
 		b, _ := json.MarshalIndent(config, "", "\t")
-		os.WriteFile("./config.json", b, 727)
+		os.WriteFile("./config.json", b, 0777)
 		return config
 	}
 	json.Unmarshal(content, &config)
