@@ -8,8 +8,13 @@ require (
 	github.com/df-mc/dragonfly v0.4.3-0.20211204225058-616db999925f
 	github.com/dragonfly-on-steroids/npc v0.0.0-20211204212123-63e12c3e90de
 	github.com/go-gl/mathgl v1.0.0
+	github.com/go-sql-driver/mysql v1.6.0
 	github.com/sirupsen/logrus v1.8.1
 )
+
+require github.com/SGPractice/link v0.0.0-20211214230603-bc630522c738
+
+require github.com/hako/durafmt v0.0.0-20210608085754-5c1018a4e16b
 
 require (
 	github.com/brentp/intintmap v0.0.0-20190211203843-30dc0ade9af9 // indirect
