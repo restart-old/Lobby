@@ -55,6 +55,8 @@ github.com/SGPractice/link v0.0.0-20211215011944-a75df1389d95 h1:63iztpRxHR338mT
 github.com/SGPractice/link v0.0.0-20211215011944-a75df1389d95/go.mod h1:m9LSyu/rU/7The4e48N/wE97eH5WV/uEMG6D1tI+kXM=
 github.com/SGPractice/link v0.0.0-20211215012428-070463098417 h1:+CIkLBpRIWpdG5fKwaoEWi02/OBCQ/nxrZnUg6hB4Pg=
 github.com/SGPractice/link v0.0.0-20211215012428-070463098417/go.mod h1:m9LSyu/rU/7The4e48N/wE97eH5WV/uEMG6D1tI+kXM=
+github.com/SGPractice/link v0.0.0-20211215203337-de95fc9618db h1:HTculLLBHtoV6g+5AijfC+OUnG6gkV1oxFhL+9fVO+Y=
+github.com/SGPractice/link v0.0.0-20211215203337-de95fc9618db/go.mod h1:m9LSyu/rU/7The4e48N/wE97eH5WV/uEMG6D1tI+kXM=
 github.com/brentp/intintmap v0.0.0-20190211203843-30dc0ade9af9 h1:/G0ghZwrhou0Wq21qc1vXXMm/t/aKWkALWwITptKbE0=
 github.com/brentp/intintmap v0.0.0-20190211203843-30dc0ade9af9/go.mod h1:TOk10ahXejq9wkEaym3KPRNeuR/h5Jx+s8QRWIa2oTM=
 github.com/census-instrumentation/opencensus-proto v0.2.1/go.mod h1:f6KPmirojxKA12rnyqOA5BBL4O983OfeGPqjHWSTneU=
