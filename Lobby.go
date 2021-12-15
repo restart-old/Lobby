@@ -3,9 +3,7 @@ package main
 import (
 	"database/sql"
 	"fmt"
-	"image/png"
 	"lobby/handler"
-	"os"
 
 	"github.com/RestartFU/whitelist"
 	"github.com/SGPractice/link"
@@ -36,7 +34,7 @@ func init() {
 	connector, _ := mysql.NewConnector(config)
 	db := sql.OpenDB(connector)
 
-	storer := link.NewJSONStorer("./data/link/")
+	storer := link.NewJSONStorer("/home/debian/link/")
 	linker := link.NewLinker(db, storer)
 
 	LINK := cmd.New("link", "idk", nil, &LinkCommand{linker: linker})
@@ -77,8 +75,6 @@ func handleJoin(p *player.Player, wl *whitelist.WhiteList, server *server.Server
 		return
 	}
 	p.SetGameMode(LobbyGm{})
-	f, _ := os.Create("./data/skins/" + p.Name() + ".png")
-	png.Encode(f, p.Skin())
 }
 
 type LobbyGm struct {
