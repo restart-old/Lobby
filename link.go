@@ -16,7 +16,7 @@ type LinkCommand struct {
 func (l LinkCommand) Run(src cmd.Source, o *cmd.Output) {
 	if p, ok := src.(*player.Player); ok {
 		var code link.Code
-		if r, ok, err := l.linker.LinkedFromGamerTag(src.Name()); !ok {
+		if r, ok, err := l.linker.LinkedFromXUID(p.XUID()); !ok {
 			if err != nil {
 				p.Message("§cAn error occurred, please notify staff!")
 				return
@@ -39,7 +39,7 @@ type UnlinkCommand struct {
 
 func (l UnlinkCommand) Run(src cmd.Source, o *cmd.Output) {
 	if p, ok := src.(*player.Player); ok {
-		if r, ok, err := l.linker.LinkedFromGamerTag(src.Name()); ok {
+		if r, ok, err := l.linker.LinkedFromXUID(p.XUID()); ok {
 			if err != nil {
 				p.Message("§cAn error occurred, please notify staff!")
 				return
