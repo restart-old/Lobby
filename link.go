@@ -21,8 +21,8 @@ func (l LinkCommand) Run(src cmd.Source, o *cmd.Output) {
 				p.Message("§cAn error occurred, please notify staff!")
 				return
 			}
-			if code, ok = l.linker.LoadByUser(src.Name()); !ok {
-				code = link.NewCode(7)
+			if code, _, ok = l.linker.LoadByUser(src.Name()); !ok {
+				code = link.NewCode(7, p.XUID())
 				l.linker.Storer.Store(src.Name(), code)
 			}
 			until := time.Until(code.Expiration)

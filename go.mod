@@ -12,7 +12,7 @@ require (
 	github.com/sirupsen/logrus v1.8.1
 )
 
-require github.com/SGPractice/link v0.0.0-20211215203337-de95fc9618db
+require github.com/SGPractice/link v0.0.0-20211216230834-c9242c14266a
 
 require github.com/hako/durafmt v0.0.0-20210608085754-5c1018a4e16b
 

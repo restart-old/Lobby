@@ -57,6 +57,14 @@ github.com/SGPractice/link v0.0.0-20211215012428-070463098417 h1:+CIkLBpRIWpdG5f
 github.com/SGPractice/link v0.0.0-20211215012428-070463098417/go.mod h1:m9LSyu/rU/7The4e48N/wE97eH5WV/uEMG6D1tI+kXM=
 github.com/SGPractice/link v0.0.0-20211215203337-de95fc9618db h1:HTculLLBHtoV6g+5AijfC+OUnG6gkV1oxFhL+9fVO+Y=
 github.com/SGPractice/link v0.0.0-20211215203337-de95fc9618db/go.mod h1:m9LSyu/rU/7The4e48N/wE97eH5WV/uEMG6D1tI+kXM=
+github.com/SGPractice/link v0.0.0-20211215210016-b2de4f35d4cd h1:kya6w3M5+MJJzeu7MTtcGKvmQEmt4asi3keRx+vadAM=
+github.com/SGPractice/link v0.0.0-20211215210016-b2de4f35d4cd/go.mod h1:m9LSyu/rU/7The4e48N/wE97eH5WV/uEMG6D1tI+kXM=
+github.com/SGPractice/link v0.0.0-20211215212458-d921c331c9b2 h1:ao5p7GrrKO4YSyyN8pluzI2mAt17U1drFbQgA08PVNk=
+github.com/SGPractice/link v0.0.0-20211215212458-d921c331c9b2/go.mod h1:m9LSyu/rU/7The4e48N/wE97eH5WV/uEMG6D1tI+kXM=
+github.com/SGPractice/link v0.0.0-20211216230254-484f666c893a h1:GYFAUSzRcBkHRRimmRZhHtLundw7E5r/ca81K8azzSE=
+github.com/SGPractice/link v0.0.0-20211216230254-484f666c893a/go.mod h1:m9LSyu/rU/7The4e48N/wE97eH5WV/uEMG6D1tI+kXM=
+github.com/SGPractice/link v0.0.0-20211216230834-c9242c14266a h1:Jo5+qiZYWBoZQ9/czfo02L2oyuKScS/7e80j8z5LcXk=
+github.com/SGPractice/link v0.0.0-20211216230834-c9242c14266a/go.mod h1:m9LSyu/rU/7The4e48N/wE97eH5WV/uEMG6D1tI+kXM=
 github.com/brentp/intintmap v0.0.0-20190211203843-30dc0ade9af9 h1:/G0ghZwrhou0Wq21qc1vXXMm/t/aKWkALWwITptKbE0=
 github.com/brentp/intintmap v0.0.0-20190211203843-30dc0ade9af9/go.mod h1:TOk10ahXejq9wkEaym3KPRNeuR/h5Jx+s8QRWIa2oTM=
 github.com/census-instrumentation/opencensus-proto v0.2.1/go.mod h1:f6KPmirojxKA12rnyqOA5BBL4O983OfeGPqjHWSTneU=
