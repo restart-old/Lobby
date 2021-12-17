@@ -27,6 +27,8 @@ func (l UnlinkCommand) Run(src cmd.Source, o *cmd.Output) {
 			} else {
 				p.Messagef("§cYou are on unlink cooldown, wait %s.", durafmt.Parse(time.Until(r.LinkedSince().Add(21600*time.Minute))).LimitFirstN(1))
 			}
+		} else {
+			p.Message("§cYou are not linked to any discord account.")
 		}
 	}
 }

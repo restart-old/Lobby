@@ -25,7 +25,7 @@ func (l LinkCommand) Run(src cmd.Source, o *cmd.Output) {
 				Linker.Storer.Store(src.Name(), code)
 			}
 			until := time.Until(code.Expiration)
-			p.Messagef("§aYour code is %s and it will expire in %s.\n go on discord.gg/glowhcf and run the command /link <code>", code.Code, durafmt.Parse(until).LimitFirstN(2))
+			p.Messagef("§aYour code is %s and it will expire in %s.\ngo on discord.gg/glowhcf and run the command /link <code>", code.Code, durafmt.Parse(until).LimitFirstN(2))
 		} else {
 			p.Messagef("§cYou are already linked with the ID: %s, use /unlink if you wish to link again.", r.DiscordID())
 		}
