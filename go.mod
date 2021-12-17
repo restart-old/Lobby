@@ -5,7 +5,7 @@ go 1.17
 require (
 	github.com/RestartFU/mcbe v0.0.0-20211128004125-92545999fad8
 	github.com/RestartFU/whitelist v0.0.0-20211217010933-8922704829c1
-	github.com/df-mc/dragonfly v0.4.3-0.20211204225058-616db999925f
+	github.com/df-mc/dragonfly v0.4.3-0.20211217155923-57dd43d943c8
 	github.com/dragonfly-on-steroids/npc v0.0.0-20211204212123-63e12c3e90de
 	github.com/go-gl/mathgl v1.0.0
 	github.com/go-sql-driver/mysql v1.6.0
@@ -25,7 +25,7 @@ require (
 	github.com/brentp/intintmap v0.0.0-20190211203843-30dc0ade9af9 // indirect
 	github.com/cespare/xxhash v1.1.0 // indirect
 	github.com/df-mc/goleveldb v1.1.9 // indirect
-	github.com/dragonfly-on-steroids/moreHandlers v0.0.0-20211205000336-6253e90a89cf // direct
+	github.com/dragonfly-on-steroids/moreHandlers v0.0.0-20211210211204-565bab0501ef // direct
 	github.com/golang/protobuf v1.5.2 // indirect
 	github.com/golang/snappy v0.0.3 // indirect
 	github.com/google/uuid v1.3.0 // indirect

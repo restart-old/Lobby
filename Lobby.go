@@ -70,7 +70,7 @@ func main() {
 		if p, err := server.Accept(); err != nil {
 			return
 		} else {
-			p.Handle(moreHandlers.New(&handler.PlayerHandler{P: p}))
+			p.Handle(moreHandlers.NewPlayerHandler(&handler.PlayerHandler{P: p}))
 			go handleJoin(p, wl, server)
 		}
 	}
@@ -110,6 +110,6 @@ func (LobbyGm) AllowsEditing() bool      { return false }
 func (LobbyGm) AllowsTakingDamage() bool { return false }
 func (LobbyGm) CreativeInventory() bool  { return false }
 func (LobbyGm) HasCollision() bool       { return true }
-func (LobbyGm) AllowsFlying() bool       { return true }
+func (LobbyGm) AllowsFlying() bool       { return false }
 func (LobbyGm) AllowsInteraction() bool  { return true }
 func (LobbyGm) Visible() bool            { return true }

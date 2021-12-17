@@ -61,10 +61,14 @@ github.com/df-mc/dragonfly v0.4.1-0.20211128155728-073e26a29251/go.mod h1:T21p8d
 github.com/df-mc/dragonfly v0.4.3-0.20211204224307-36fc1c2a9494/go.mod h1:saPioTIQPe/rDjVCbwkPie95qBuFilmreqZJM3HylOo=
 github.com/df-mc/dragonfly v0.4.3-0.20211204225058-616db999925f h1:c79gcEWwzcCwqOEyF/5QfoFqucf0sYnLlh/P+kB5hKA=
 github.com/df-mc/dragonfly v0.4.3-0.20211204225058-616db999925f/go.mod h1:saPioTIQPe/rDjVCbwkPie95qBuFilmreqZJM3HylOo=
+github.com/df-mc/dragonfly v0.4.3-0.20211217155923-57dd43d943c8 h1:uau5a/T4uJ0ac5QNd9Gn2nj5GMYb3FyGOETh9k49T5U=
+github.com/df-mc/dragonfly v0.4.3-0.20211217155923-57dd43d943c8/go.mod h1:saPioTIQPe/rDjVCbwkPie95qBuFilmreqZJM3HylOo=
 github.com/df-mc/goleveldb v1.1.9 h1:ihdosZyy5jkQKrxucTQmN90jq/2lUwQnJZjIYIC/9YU=
 github.com/df-mc/goleveldb v1.1.9/go.mod h1:+NHCup03Sci5q84APIA21z3iPZCuk6m6ABtg4nANCSk=
 github.com/dragonfly-on-steroids/moreHandlers v0.0.0-20211205000336-6253e90a89cf h1:gSJVnr8pF49kYyMhrp+7SSPy+lbFgDiKR1YknD08HlE=
 github.com/dragonfly-on-steroids/moreHandlers v0.0.0-20211205000336-6253e90a89cf/go.mod h1:lr6Mz/ZvOoJoc5V5mQ7Qj8V1fJTGaW+Wb81Kca9Jkss=
+github.com/dragonfly-on-steroids/moreHandlers v0.0.0-20211210211204-565bab0501ef h1:INQWho61nUPWJllgwpJeaszEkQ7Nc5ezOeDQdW6iGZ0=
+github.com/dragonfly-on-steroids/moreHandlers v0.0.0-20211210211204-565bab0501ef/go.mod h1:U7lUyfXWWp0+JunDEf0cUX5WQ+it5QChyExhgZzmRWQ=
 github.com/dragonfly-on-steroids/npc v0.0.0-20211204212123-63e12c3e90de h1:zgqPkC3YgRNK7ERANqninTRIHqCG9JJmGjZWK9vWblw=
 github.com/dragonfly-on-steroids/npc v0.0.0-20211204212123-63e12c3e90de/go.mod h1:Ed9q+vLROAzxbe7jr/wtD7PoTX77uz8CMGOI4s0e5EU=
 github.com/envoyproxy/go-control-plane v0.9.0/go.mod h1:YTl/9mNaCwkRvm6d1a2C3ymFceY/DCBVvsKhRF0iEA4=
