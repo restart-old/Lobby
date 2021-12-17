@@ -96,13 +96,19 @@ type invHandler struct {
 func (*invHandler) HandlePlace(ctx *event.Context, slot int, it item.Stack) {
 	ctx.Cancel()
 }
+func (*invHandler) HandleDrop(ctx *event.Context, slot int, it item.Stack) {
+	ctx.Cancel()
+}
+func (*invHandler) HandleTake(ctx *event.Context, slot int, it item.Stack) {
+	ctx.Cancel()
+}
 
 type LobbyGm struct {
 }
 
 func (LobbyGm) AllowsEditing() bool      { return false }
 func (LobbyGm) AllowsTakingDamage() bool { return false }
-func (LobbyGm) CreativeInventory() bool  { return true }
+func (LobbyGm) CreativeInventory() bool  { return false }
 func (LobbyGm) HasCollision() bool       { return true }
 func (LobbyGm) AllowsFlying() bool       { return true }
 func (LobbyGm) AllowsInteraction() bool  { return true }
