@@ -3,54 +3,59 @@ package main
 import (
 	"database/sql"
 	"fmt"
+	"lobby/commands"
 	"lobby/handler"
 
+	"github.com/RestartFU/gophig"
 	"github.com/RestartFU/whitelist"
 	"github.com/SGPractice/link"
 	"github.com/df-mc/dragonfly/server"
 	"github.com/df-mc/dragonfly/server/block/cube"
 	"github.com/df-mc/dragonfly/server/cmd"
+	"github.com/df-mc/dragonfly/server/event"
+	"github.com/df-mc/dragonfly/server/item"
+	"github.com/df-mc/dragonfly/server/item/inventory"
 	"github.com/df-mc/dragonfly/server/player"
 	"github.com/dragonfly-on-steroids/moreHandlers"
 	"github.com/go-sql-driver/mysql"
+	"github.com/sirupsen/logrus"
 )
 
 var wl *whitelist.WhiteList
-var config server.Config
+var logger *logrus.Logger
 
 func init() {
 	wl, _ = whitelist.New("./whitelist.json")
-	config = readConfig()
+	logger = logrus.New()
+	logger.Formatter = &logrus.TextFormatter{ForceColors: true}
 }
 
 func init() {
-	config := mysql.NewConfig()
-	config.DBName = "GlowHCF"
-	config.User = "root"
-	config.Addr = ":3306"
-	config.Passwd = "f37JZEUm2QFexguhRuyscW{AdrKr86KajFGf%VT2h6BJUUF"
-	config.Net = "tcp"
-
-	connector, _ := mysql.NewConnector(config)
+	var config mysql.Config
+	gophig.GetConf("./mysql", "toml", &config)
+	connector, _ := mysql.NewConnector(&config)
 	db := sql.OpenDB(connector)
 
 	storer := link.NewJSONStorer("/home/debian/link/")
-	linker := link.NewLinker(db, storer)
+	commands.Linker = link.NewLinker(db, storer)
 
-	LINK := cmd.New("link", "idk", nil, &LinkCommand{linker: linker})
-	UNLINK := cmd.New("unlink", "idk", nil, &UnlinkCommand{linker: linker})
+	LINK := cmd.New("link", "link this account with your discord account!", nil, &commands.LinkCommand{})
+	UNLINK := cmd.New("unlink", "unlink this account from your currently linked discord account!", nil, &commands.UnlinkCommand{})
 
 	cmd.Register(LINK)
 	cmd.Register(UNLINK)
 }
 
 func main() {
-	server := server.New(&config, logger())
+	var config server.Config
+	gophig.GetConf("./config", "toml", &config)
+
+	server := server.New(&config, logger)
 	server.Start()
+	fmt.Println()
 	server.CloseOnProgramEnd()
 
 	defaultWorld := server.World()
-
 	defaultWorld.StopTime()
 	defaultWorld.StopRaining()
 	defaultWorld.StopWeatherCycle()
@@ -64,17 +69,28 @@ func main() {
 		} else {
 			p.Handle(moreHandlers.New(&handler.PlayerHandler{P: p}))
 			go handleJoin(p, wl, server)
-			p.StopFlying()
 		}
 	}
 }
 func handleJoin(p *player.Player, wl *whitelist.WhiteList, server *server.Server) {
-	fmt.Println(p.Name(), "is now connected with the ip:", p.Addr().String())
+	logger.Println(p.Name(), "is now connected with the ip:", p.Addr().String())
 	if wl.Enabled && !wl.Whitelisted(p.Name()) {
 		p.Disconnect("§9Server will be back soon\n§fhttp://sgpractice.tk/discord")
 		return
 	}
+	p.Inventory().Handle(&invHandler{})
+	for _, pl := range server.Players() {
+		pl.SendTip("§a[+]§f " + p.Name())
+	}
 	p.SetGameMode(LobbyGm{})
+}
+
+type invHandler struct {
+	inventory.NopHandler
+}
+
+func (*invHandler) HandlePlace(ctx *event.Context, slot int, it item.Stack) {
+	ctx.Cancel()
 }
 
 type LobbyGm struct {
@@ -83,7 +99,7 @@ type LobbyGm struct {
 func (LobbyGm) AllowsEditing() bool      { return false }
 func (LobbyGm) AllowsTakingDamage() bool { return false }
 func (LobbyGm) CreativeInventory() bool  { return true }
-func (LobbyGm) HasCollision() bool       { return false }
+func (LobbyGm) HasCollision() bool       { return true }
 func (LobbyGm) AllowsFlying() bool       { return true }
 func (LobbyGm) AllowsInteraction() bool  { return true }
 func (LobbyGm) Visible() bool            { return true }

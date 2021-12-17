@@ -1,0 +1,24 @@
+
+[Network]
+  Address = ":19132"
+
+[Players]
+  Folder = "./data/players"
+  MaxCount = 500
+  MaximumChunkRadius = 4
+  SaveData = false
+
+[Resources]
+  Folder = "./data/resources"
+
+[Server]
+  AuthEnabled = true
+  JoinMessage = ""
+  Name = "§9SG (Back Soon)"
+  QuitMessage = ""
+  ShutdownMessage = "§9Server closed."
+
+[World]
+  Folder = "./data/world"
+  Name = "§9Lobby"
+  SimulationDistance = 8

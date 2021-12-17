@@ -4,7 +4,7 @@ go 1.17
 
 require (
 	github.com/RestartFU/mcbe v0.0.0-20211128004125-92545999fad8
-	github.com/RestartFU/whitelist v0.0.0-20211127040035-e0458c5d0b28
+	github.com/RestartFU/whitelist v0.0.0-20211217010933-8922704829c1
 	github.com/df-mc/dragonfly v0.4.3-0.20211204225058-616db999925f
 	github.com/dragonfly-on-steroids/npc v0.0.0-20211204212123-63e12c3e90de
 	github.com/go-gl/mathgl v1.0.0
@@ -14,7 +14,12 @@ require (
 
 require github.com/SGPractice/link v0.0.0-20211216230834-c9242c14266a
 
-require github.com/hako/durafmt v0.0.0-20210608085754-5c1018a4e16b
+require (
+	github.com/RestartFU/gophig v0.0.0-20211217030855-45df7ce19925
+	github.com/hako/durafmt v0.0.0-20210608085754-5c1018a4e16b
+)
+
+require github.com/pelletier/go-toml v1.9.4 // indirect
 
 require (
 	github.com/brentp/intintmap v0.0.0-20190211203843-30dc0ade9af9 // indirect
