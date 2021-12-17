@@ -16,6 +16,7 @@ import (
 	"github.com/df-mc/dragonfly/server/item"
 	"github.com/df-mc/dragonfly/server/item/inventory"
 	"github.com/df-mc/dragonfly/server/player"
+	"github.com/df-mc/dragonfly/server/player/chat"
 	"github.com/dragonfly-on-steroids/moreHandlers"
 	"github.com/go-sql-driver/mysql"
 	"github.com/sirupsen/logrus"
@@ -47,6 +48,8 @@ func init() {
 }
 
 func main() {
+	chat.Global.Subscribe(chat.StdoutSubscriber{})
+
 	var config server.Config
 	gophig.GetConf("./config", "toml", &config)
 
@@ -82,6 +85,7 @@ func handleJoin(p *player.Player, wl *whitelist.WhiteList, server *server.Server
 	for _, pl := range server.Players() {
 		pl.SendTip("§a[+]§f " + p.Name())
 	}
+	p.SetNameTag("§7" + p.Name())
 	p.SetGameMode(LobbyGm{})
 }
 
