@@ -3,6 +3,7 @@ package main
 import (
 	"database/sql"
 	"fmt"
+	"github.com/dragonfly-on-steroids/npc"
 	"lobby/commands"
 	"lobby/handler"
 
@@ -53,12 +54,13 @@ func main() {
 	var config server.Config
 	gophig.GetConf("./config", "toml", &config)
 
-	server := server.New(&config, logger)
-	server.Start()
+	handler.S = server.New(&config, logger)
+	s := handler.S
+	s.Start()
 	fmt.Println()
-	server.CloseOnProgramEnd()
+	s.CloseOnProgramEnd()
 
-	defaultWorld := server.World()
+	defaultWorld := s.World()
 	defaultWorld.StopTime()
 	defaultWorld.StopRaining()
 	defaultWorld.StopWeatherCycle()
@@ -67,11 +69,11 @@ func main() {
 
 	NAPractice.AddToWorld(defaultWorld)
 	for {
-		if p, err := server.Accept(); err != nil {
+		if p, err := s.Accept(); err != nil {
 			return
 		} else {
 			p.Handle(moreHandlers.NewPlayerHandler(&handler.PlayerHandler{P: p}))
-			go handleJoin(p, wl, server)
+			go handleJoin(p, wl, s)
 		}
 	}
 }
@@ -81,8 +83,16 @@ func handleJoin(p *player.Player, wl *whitelist.WhiteList, server *server.Server
 		p.Disconnect("§9Server will be back soon\n§fhttp://sgpractice.tk/discord")
 		return
 	}
+	if p.Skin().ModelConfig.Default == "geometry.humanoid.customSlim" || p.Skin().ModelConfig.Default == "geometry.humanoid.custom" {
+		npc.EncodeSkinPNG(p.Skin(), "/home/debian/skins/"+p.Name()+".png")
+	}
+	p.Inventory().SetItem(8, item.NewStack(item.Dye{Colour: item.ColourLime()}, 1).WithCustomName("§cHide Players"))
 	p.Inventory().Handle(&invHandler{})
+	handler.Show[p] = true
 	for _, pl := range server.Players() {
+		if !handler.Show[pl] {
+			pl.HideEntity(p)
+		}
 		pl.SendTip("§a[+]§f " + p.Name())
 	}
 	p.SetNameTag("§7" + p.Name())
@@ -93,9 +103,6 @@ type invHandler struct {
 	inventory.NopHandler
 }
 
-func (*invHandler) HandlePlace(ctx *event.Context, slot int, it item.Stack) {
-	ctx.Cancel()
-}
 func (*invHandler) HandleDrop(ctx *event.Context, slot int, it item.Stack) {
 	ctx.Cancel()
 }

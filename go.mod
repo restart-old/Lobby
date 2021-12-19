@@ -5,7 +5,7 @@ go 1.17
 require (
 	github.com/RestartFU/mcbe v0.0.0-20211128004125-92545999fad8
 	github.com/RestartFU/whitelist v0.0.0-20211217010933-8922704829c1
-	github.com/df-mc/dragonfly v0.4.3-0.20211217155923-57dd43d943c8
+	github.com/df-mc/dragonfly v0.4.3-0.20211217165616-ee475c33e36d
 	github.com/dragonfly-on-steroids/npc v0.0.0-20211204212123-63e12c3e90de
 	github.com/go-gl/mathgl v1.0.0
 	github.com/go-sql-driver/mysql v1.6.0
