@@ -23,11 +23,10 @@ import (
 	"github.com/sirupsen/logrus"
 )
 
-var wl *whitelist.WhiteList
 var logger *logrus.Logger
 
 func init() {
-	wl, _ = whitelist.New("./whitelist.json")
+	chat.Global.Subscribe(chat.StdoutSubscriber{})
 	logger = logrus.New()
 	logger.Formatter = &logrus.TextFormatter{ForceColors: true}
 }
@@ -49,7 +48,11 @@ func init() {
 }
 
 func main() {
-	chat.Global.Subscribe(chat.StdoutSubscriber{})
+	settings := &whitelist.Settings{
+		CacheOnly: false,
+		Gophig:    gophig.NewGophig("./whitelist", "toml", 0777),
+	}
+	wl, _ := whitelist.New(settings)
 
 	var config server.Config
 	gophig.GetConf("./config", "toml", &config)
